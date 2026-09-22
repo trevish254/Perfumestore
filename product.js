@@ -28,6 +28,28 @@ const renderGallery = () => {
   const multiple = galleryImages.length > 1; document.querySelector('.gallery-prev').hidden = !multiple; document.querySelector('.gallery-next').hidden = !multiple;
 };
 
+const renderRecommendations = (products, currentName) => {
+  const grid = document.querySelector('.recommendations-grid');
+  if (!grid) return;
+  const recommendations = products.filter((product) => product.title !== currentName).slice(0, 4);
+  if (!recommendations.length) return;
+  grid.replaceChildren(...recommendations.map((product) => {
+    const card = document.createElement('article'); card.className = 'recommendation-card'; card.dataset.recommendation = product.title;
+    const imageWrap = document.createElement('div'); imageWrap.className = 'recommendation-image';
+    const tags = product.product_tags || []; const badge = tags.includes('bestseller') ? 'Bestseller' : tags.includes('new') ? 'New' : tags.includes('featured') ? 'Featured' : '';
+    if (badge) { const badgeElement = document.createElement('span'); badgeElement.className = 'recommendation-badge'; badgeElement.textContent = badge; imageWrap.append(badgeElement); }
+    const favorite = document.createElement('button'); favorite.className = 'recommendation-favorite'; favorite.type = 'button'; favorite.setAttribute('aria-label', `Add ${product.title} to favorites`); favorite.textContent = '♡';
+    const image = document.createElement('img'); image.src = product.image_urls?.[0] || product.image_url || ''; image.alt = product.title; image.loading = 'lazy'; imageWrap.append(favorite, image);
+    const info = document.createElement('div'); info.className = 'recommendation-info'; const title = document.createElement('h3'); title.textContent = product.title; const price = document.createElement('p'); price.textContent = `$${Number(product.price).toFixed(2)} USD`; info.append(title, price); card.append(imageWrap, info); return card;
+  }));
+  grid.querySelectorAll('.recommendation-card').forEach((card) => card.addEventListener('click', (event) => { if (event.target.closest('button')) return; window.location.href = `product.html?product=${encodeURIComponent(card.dataset.recommendation)}`; }));
+};
+
+const loadRecommendations = async (currentName) => {
+  if (!window.supabaseRequest) return;
+  try { const products = await window.supabaseRequest('products?select=*&is_active=eq.true&order=created_at.desc'); renderRecommendations(products, currentName); } catch (error) { console.warn('Recommendations unavailable:', error); }
+};
+
 const fallbackProduct = productCatalog[selectedName] || productCatalog['Pure Cleanser'];
 setProductDetails({ name: selectedName, ...fallbackProduct, images: [fallbackProduct.image] });
 
@@ -36,9 +58,10 @@ const loadDatabaseProduct = async () => {
   try {
     const rows = await window.supabaseRequest(`products?select=*&title=eq.${encodeURIComponent(selectedName)}&is_active=eq.true&limit=1`);
     const row = rows[0];
-    if (!row) return;
+    if (!row) { loadRecommendations(selectedName); return; }
     const tags = row.product_tags || [];
     setProductDetails({ name: row.title, price: Number(row.price), badge: tags.includes('bestseller') ? 'Bestseller' : tags.includes('new') ? 'New' : tags.includes('featured') ? 'Featured' : '', image: row.image_urls?.[0] || row.image_url, images: row.image_urls || (row.image_url ? [row.image_url] : []), description: row.description });
+    loadRecommendations(row.title);
   } catch (error) { console.warn('Database product unavailable; using fallback:', error); }
 };
 loadDatabaseProduct();
@@ -49,5 +72,6 @@ const quantityLabel = document.querySelector('#quantity');
 document.querySelector('#decrease').addEventListener('click', () => { quantity = Math.max(1, quantity - 1); quantityLabel.textContent = quantity; });
 document.querySelector('#increase').addEventListener('click', () => { quantity += 1; quantityLabel.textContent = quantity; });
 document.querySelector('#add-to-cart').addEventListener('click', () => { window.addVelinCartItem({ name: activeProduct.name, image: galleryImages[0], price: Number(activeProduct.price), quantity }); document.querySelector('#cart-message').hidden = false; });
+document.querySelector('#mpesa-checkout')?.addEventListener('click', () => { window.location.href = `checkout.html?product=${encodeURIComponent(activeProduct.name)}`; });
 
 document.querySelectorAll('.recommendation-card').forEach((card) => card.addEventListener('click', (event) => { if (event.target.closest('button')) return; window.location.href = `product.html?product=${encodeURIComponent(card.dataset.recommendation)}`; }));
