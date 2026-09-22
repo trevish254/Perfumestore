@@ -13,6 +13,22 @@ document.querySelectorAll('.footer-column').forEach((column) => {
 });
 document.title = document.title.replace(/Velin/gi, 'Perfume Store');
 
+if (document.body.classList.contains('about-page')) {
+  const aboutHeroImage = document.querySelector('.about-hero-image img');
+  if (aboutHeroImage) { aboutHeroImage.src = 'https://images.unsplash.com/photo-1705899844877-81bb0a0665c1?auto=format&fit=crop&w=1800&q=90'; aboutHeroImage.alt = 'Minimal perfume bottle and natural stones'; }
+  const timelineImages = [
+    'https://images.unsplash.com/photo-1646639181895-33d6b2f79d22?auto=format&fit=crop&w=900&q=90',
+    'https://images.unsplash.com/photo-1733348172372-31f147483275?auto=format&fit=crop&w=900&q=90',
+    'https://images.unsplash.com/photo-1705899844877-81bb0a0665c1?auto=format&fit=crop&w=900&q=90',
+    'https://images.unsplash.com/photo-1642999743456-f7073a0b2d9c?auto=format&fit=crop&w=900&q=90'
+  ];
+  document.querySelectorAll('.timeline-grid img').forEach((image, index) => { if (timelineImages[index]) image.src = timelineImages[index]; image.alt = `Perfume Store fragrance milestone ${index + 1}`; });
+  const impactImage = document.querySelector('.impact-image img');
+  if (impactImage) { impactImage.src = 'https://images.unsplash.com/photo-1705899844877-81bb0a0665c1?auto=format&fit=crop&w=1200&q=90'; impactImage.alt = 'Perfume bottle in a natural still life'; }
+  const founderName = document.querySelector('.founder-section h2 em');
+  if (founderName) founderName.textContent = 'Projectskevv';
+}
+
 function readVelinCart() {
   try { return JSON.parse(localStorage.getItem('velin-cart') || '[]'); } catch { return []; }
 }
