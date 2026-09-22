@@ -1,0 +1,62 @@
+.checkout-page { min-height: 100vh; background: var(--paper); }
+.checkout-page .navbar { grid-template-columns: 1fr auto 1fr; }
+.checkout-page .nav-actions { gap: 24px; }
+.checkout-page .brand { font-size: 0; }
+.checkout-page .brand::after { content: "Perfume Store"; font-size: clamp(22px, 2.2vw, 31px); }
+.checkout-secure { color: #73716b; font-size: 12px; }
+.checkout-main { width: 100%; max-width: 1180px; margin: 0 auto; padding: 70px 24px 120px; }
+.checkout-heading { margin: 0 0 48px; text-align: center; }
+.checkout-eyebrow { color: #bc6c25; font-size: 12px; letter-spacing: .1em; }
+.checkout-heading h1 { margin: 12px 0 0; font: 400 44px/1 var(--display); letter-spacing: -.04em; }
+.checkout-layout { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(300px, .85fr); gap: 64px; align-items: start; }
+.checkout-form { display: flex; flex-direction: column; gap: 38px; }
+.checkout-section { padding-bottom: 34px; border-bottom: 1px solid #dedbd5; }
+.section-heading { display: flex; align-items: baseline; gap: 12px; margin-bottom: 24px; }
+.section-heading > span { color: #bc6c25; font-size: 12px; }
+.section-heading h2 { margin: 0; font: 400 25px/1 var(--display); }
+.form-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px 14px; }
+.form-grid label, .mpesa-card label { display: flex; flex-direction: column; gap: 8px; color: #555; font-size: 12px; }
+.form-grid input, .form-grid textarea, .mpesa-card input { width: 100%; padding: 13px 12px; border: 1px solid #cfcac2; border-radius: 0; outline: none; color: var(--ink); background: #fff; font: 14px var(--sans); resize: vertical; }
+.form-grid input:focus, .form-grid textarea:focus, .mpesa-card input:focus { border-color: #bc6c25; }
+.full-field { grid-column: 1 / -1; }
+.mpesa-card { padding: 22px; border: 1px solid #d6d0c8; background: #fff; }
+.mpesa-brand { display: flex; align-items: center; gap: 12px; margin-bottom: 18px; }
+.mpesa-brand > div { display: flex; flex-direction: column; gap: 3px; }
+.mpesa-brand strong { font-size: 16px; }
+.mpesa-brand span:last-child { color: #73716b; font-size: 12px; }
+.mpesa-mark { display: grid; width: 34px; height: 34px; place-items: center; border-radius: 50%; color: #fff; background: #46a447; font-weight: 600; }
+.mpesa-mark.small { width: 22px; height: 22px; font-size: 11px; }
+.mpesa-card p { margin: 0 0 20px; color: #73716b; font-size: 13px; line-height: 1.5; }
+.terms-line { display: flex; align-items: center; gap: 8px; color: #555; font-size: 12px; }
+.terms-line input { accent-color: #bc6c25; }
+.place-order-button { display: flex; align-items: center; justify-content: space-between; width: 100%; height: 50px; padding: 0 18px; border: 0; color: #fff; background: #bc6c25; text-transform: uppercase; font-size: 12px; font-weight: 600; cursor: pointer; }
+.place-order-button:hover { background: #a65c1c; }
+.place-order-button span { font-size: 20px; }
+.checkout-message { margin: -22px 0 0; color: #378139; font-size: 13px; }
+.order-summary { position: sticky; top: 24px; padding: 24px; background: #eeece8; }
+.summary-heading { display: flex; align-items: center; justify-content: space-between; padding-bottom: 20px; border-bottom: 1px solid #d5d1ca; }
+.summary-heading h2 { margin: 0; font: 400 25px var(--display); }
+.summary-heading a { color: #73716b; font-size: 12px; text-decoration: underline; text-underline-offset: 3px; }
+.summary-items { display: flex; flex-direction: column; gap: 16px; padding: 20px 0; }
+.summary-item { display: grid; grid-template-columns: 74px 1fr auto; gap: 12px; align-items: center; }
+.summary-item img { width: 74px; height: 74px; object-fit: cover; background: #e5e5e5; }
+.summary-item-info { display: flex; flex-direction: column; gap: 5px; font-size: 13px; }
+.summary-item-info span { color: #73716b; font-size: 11px; }
+.summary-item > strong { font-size: 13px; }
+.summary-empty { color: #73716b; font-size: 13px; }
+.summary-totals { padding-top: 18px; border-top: 1px solid #d5d1ca; }
+.summary-totals > div { display: flex; justify-content: space-between; gap: 20px; padding: 7px 0; color: #555; font-size: 13px; }
+.summary-total { margin-top: 8px; padding-top: 16px !important; border-top: 1px solid #d5d1ca; color: var(--ink) !important; font-size: 16px !important; }
+.mpesa-only-note { display: flex; align-items: center; gap: 8px; margin-top: 22px; color: #378139; font-size: 12px; }
+
+@media (max-width: 760px) {
+  .checkout-page .nav-links, .checkout-page .nav-actions { display: none; }
+  .checkout-page .navbar { display: flex; justify-content: center; }
+  .checkout-main { padding: 54px 16px 80px; }
+  .checkout-heading { margin-bottom: 35px; }
+  .checkout-heading h1 { font-size: 38px; }
+  .checkout-layout { grid-template-columns: 1fr; gap: 48px; }
+  .order-summary { position: static; order: -1; }
+  .form-grid { grid-template-columns: 1fr; }
+  .full-field { grid-column: auto; }
+}

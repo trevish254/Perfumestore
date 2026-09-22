@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Orders — Perfume Store Admin</title>
+    <link rel="stylesheet" href="../admin.css" /><link rel="stylesheet" href="orders.css" />
+  </head>
+  <body>
+    <aside class="sidebar">
+      <div class="profile-card"><img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=160&q=85" alt="Perfume Store admin" /><div><h1>Perfume Store</h1><p>Store Admin</p></div></div>
+      <nav class="admin-nav" aria-label="Admin navigation"><a href="../index.html"><span>⌂</span>Dashboard</a><a href="../products/index.html"><span>▣</span>Products</a><a class="active" href="./"><span>▤</span>Orders</a><a href="../users/index.html"><span>♙</span>Users</a><a href="../blogs/index.html"><span>▱</span>Blogs</a><a href="../settings/index.html"><span>⚙</span>Settings</a></nav>
+      <div class="follow-area"><p>Follow Me</p><div class="social-row"><a href="#x" aria-label="X">𝕏</a><a href="#linkedin" aria-label="LinkedIn">in</a><a href="#instagram" aria-label="Instagram">◎</a></div></div>
+    </aside>
+    <main class="admin-main orders-main">
+      <section class="orders-page-heading"><div><span class="dashboard-kicker">Store activity</span><h2>Orders</h2><p>Track, review, and manage every fragrance order in one place.</p></div><button class="export-button" type="button">Export orders</button></section>
+      <section class="orders-metrics"><article><span>All orders</span><strong>128</strong><small>+8.2% this month</small></article><article><span>Pending</span><strong>12</strong><small>Needs attention</small></article><article><span>Fulfilled</span><strong>109</strong><small>85% of total orders</small></article><article><span>Revenue</span><strong>$4,280</strong><small>+12.4% this month</small></article></section>
+      <section class="orders-content"><div class="orders-toolbar"><label class="orders-search"><span>⌕</span><input id="order-search" type="search" placeholder="Search orders or customers..." /></label><div class="order-filters"><select id="status-filter" aria-label="Filter by status"><option value="all">All status</option><option value="fulfilled">Fulfilled</option><option value="pending">Pending</option><option value="cancelled">Cancelled</option></select><select id="date-filter" aria-label="Filter by date"><option value="all">All dates</option><option value="today">Today</option><option value="yesterday">Yesterday</option></select></div></div>
+        <div class="orders-table-wrap"><table class="orders-table"><thead><tr><th>Order</th><th>Customer</th><th>Date</th><th>Items</th><th>Status</th><th>Total</th><th></th></tr></thead><tbody id="orders-body">
+          <tr data-status="fulfilled" data-date="today"><td><strong>#PS-1048</strong></td><td><div class="table-customer"><span class="order-avatar">AM</span><span>Amina M.</span></div></td><td>Today, 10:42</td><td>Pure Cleanser × 1</td><td><span class="status-pill fulfilled">Fulfilled</span></td><td>$79.00</td><td><button class="row-menu" type="button">•••</button></td></tr>
+          <tr data-status="pending" data-date="today"><td><strong>#PS-1047</strong></td><td><div class="table-customer"><span class="order-avatar warm">JK</span><span>James K.</span></div></td><td>Today, 10:24</td><td>Glow Serum × 1</td><td><span class="status-pill pending">Pending</span></td><td>$39.00</td><td><button class="row-menu" type="button">•••</button></td></tr>
+          <tr data-status="fulfilled" data-date="yesterday"><td><strong>#PS-1046</strong></td><td><div class="table-customer"><span class="order-avatar green">LN</span><span>Leah N.</span></div></td><td>Yesterday, 16:08</td><td>Dew Toner × 1</td><td><span class="status-pill fulfilled">Fulfilled</span></td><td>$138.00</td><td><button class="row-menu" type="button">•••</button></td></tr>
+          <tr data-status="cancelled" data-date="yesterday"><td><strong>#PS-1045</strong></td><td><div class="table-customer"><span class="order-avatar purple">DO</span><span>David O.</span></div></td><td>Yesterday, 12:31</td><td>Balance Moisturizer × 1</td><td><span class="status-pill cancelled">Cancelled</span></td><td>$59.00</td><td><button class="row-menu" type="button">•••</button></td></tr>
+          <tr data-status="fulfilled" data-date="yesterday"><td><strong>#PS-1044</strong></td><td><div class="table-customer"><span class="order-avatar blue">SW</span><span>Sarah W.</span></div></td><td>Yesterday, 09:17</td><td>Silk Body Wash × 2</td><td><span class="status-pill fulfilled">Fulfilled</span></td><td>$158.00</td><td><button class="row-menu" type="button">•••</button></td></tr>
+        </tbody></table><p class="no-orders" id="no-orders" hidden>No orders match your filters.</p></div></section>
+    </main>
+    <script src="orders.js"></script><script src="../admin.js"></script>
+  </body>
+</html>

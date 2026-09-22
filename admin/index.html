@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lorian — Product Designer</title>
+    <link rel="stylesheet" href="admin.css" />
+  </head>
+  <body>
+    <aside class="sidebar">
+      <div class="profile-card">
+        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=160&q=85" alt="Lorian" />
+        <div><h1>Perfume Store</h1><p>Store Admin</p></div>
+      </div>
+      <nav class="admin-nav" aria-label="Admin navigation">
+        <a class="active" href="#dashboard"><span>⌂</span>Dashboard</a>
+        <a href="products/index.html"><span>▣</span>Products</a>
+        <a href="orders/index.html"><span>▤</span>Orders</a>
+        <a href="users/index.html"><span>♙</span>Users</a>
+        <a href="blogs/index.html"><span>▱</span>Blogs</a>
+        <a href="settings/index.html"><span>⚙</span>Settings</a>
+      </nav>
+      <div class="follow-area"><p>Follow Me</p><div class="social-row"><a href="#x" aria-label="X">𝕏</a><a href="#linkedin" aria-label="LinkedIn">in</a><a href="#instagram" aria-label="Instagram">◎</a></div></div>
+    </aside>
+
+    <main class="admin-main" id="dashboard">
+      <section class="admin-hero">
+        <div class="availability"><i></i>Available for Work</div>
+        <h2>Welcome back.<br />Manage your fragrance store.</h2>
+        <p>Keep your products, orders, customers, and journal content organized in one place.</p>
+        <div class="hero-actions"><a class="primary-button" href="products/index.html">View Products</a><a class="secondary-button" href="orders/index.html">View Orders</a></div>
+      </section>
+      <div class="dotted-divider"></div>
+      <section class="dashboard-overview" aria-label="Store dashboard overview">
+        <div class="dashboard-section-heading"><div><span class="dashboard-kicker">Store overview</span><h3>Everything at a glance.</h3></div><span class="dashboard-date">Today, 22 September 2026</span></div>
+        <div class="metric-grid">
+          <article class="metric-card"><div class="metric-icon">↗</div><span>Total sales</span><strong>$4,280.00</strong><small class="positive">+12.4% this month</small></article>
+          <article class="metric-card"><div class="metric-icon">⌁</div><span>Orders</span><strong>128</strong><small class="positive">+8.2% this month</small></article>
+          <article class="metric-card"><div class="metric-icon">□</div><span>Products</span><strong>16</strong><small>4 low in stock</small></article>
+          <article class="metric-card"><div class="metric-icon">♙</div><span>Customers</span><strong>892</strong><small class="positive">+5.6% this month</small></article>
+        </div>
+        <div class="dashboard-panels">
+          <article class="dashboard-panel sales-panel"><div class="panel-heading"><div><span class="dashboard-kicker">Sales</span><h3>Weekly performance</h3></div><span class="panel-period">Last 7 days</span></div><div class="sales-visual"><div class="sales-bars"><i style="height:42%"></i><i style="height:61%"></i><i style="height:48%"></i><i style="height:76%"></i><i style="height:66%"></i><i style="height:88%"></i><i class="today" style="height:100%"></i></div><div class="sales-days"><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span><span>Sun</span></div></div></article>
+          <article class="dashboard-panel orders-panel"><div class="panel-heading"><div><span class="dashboard-kicker">Activity</span><h3>Recent orders</h3></div><a href="#orders" class="panel-link">View all</a></div><div class="mini-order"><span class="order-avatar">AM</span><div><strong>Amina M.</strong><small>Pure Cleanser · 2 min ago</small></div><b>$79.00</b></div><div class="mini-order"><span class="order-avatar warm">JK</span><div><strong>James K.</strong><small>Glow Serum · 18 min ago</small></div><b>$39.00</b></div><div class="mini-order"><span class="order-avatar green">LN</span><div><strong>Leah N.</strong><small>Dew Toner · 42 min ago</small></div><b>$79.00</b></div></article>
+        </div>
+        <div class="quick-actions"><span class="dashboard-kicker">Quick actions</span><a href="products/index.html">＋ Add product</a><a href="orders/index.html">↗ Review orders</a><a href="blogs/index.html">✎ Write a journal post</a></div>
+      </section>
+      <section class="projects-section" id="products">
+        <div class="section-title-row"><h3>Store Overview</h3><a class="all-projects" href="#products">View Products</a></div>
+        <div class="project-grid">
+          <article class="project-card"><img src="https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&w=900&q=85" alt="Lucis project preview" /><div><strong>Lucis</strong><span>Framer Template</span></div></article>
+          <article class="project-card"><img src="https://images.unsplash.com/photo-1558655146-9f40138edfeb?auto=format&fit=crop&w=900&q=85" alt="Capture project preview" /><div><strong>Capture</strong><span>Framer Template</span></div></article>
+          <article class="project-card"><img src="https://images.unsplash.com/photo-1559028012-481c04fa702d?auto=format&fit=crop&w=900&q=85" alt="Zenith project preview" /><div><strong>Zenith</strong><span>Framer Template</span></div></article>
+        </div>
+      </section>
+    </main>
+    <script src="admin.js"></script>
+  </body>
+</html>

@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Perfume Store — distinctive fragrances for slower, richer rituals." />
+    <title>Perfume Store — Fragrance, Simplified.</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="announcement-bar" role="status">
+        <span class="sparkle" aria-hidden="true">✧</span>
+        <span>15% off your order, applied automatically at checkout.</span>
+      </div>
+
+      <nav class="navbar" aria-label="Main navigation">
+        <div class="nav-group nav-links">
+          <a href="shop.html">Shop</a>
+          <a href="about.html">About</a>
+          <a href="journal.html">Journal</a><a href="contact.html">Contact</a>
+        </div>
+
+        <a class="brand" href="#top" aria-label="Perfume Store home">Perfume Store</a>
+
+        <div class="nav-group nav-actions">
+          <a href="#favorites">Favorites</a>
+          <button class="nav-button" type="button" aria-label="Open search">Search</button>
+          <a href="#cart">Cart (<span id="cart-count">0</span>)</a>
+        </div>
+
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
+          <span></span><span></span>
+        </button>
+      </nav>
+
+      <div class="mobile-menu" id="mobile-menu" hidden>
+        <a href="shop.html">Shop</a>
+        <a href="about.html">About</a>
+        <a href="journal.html">Journal</a><a href="contact.html">Contact</a>
+        <a href="#favorites">Favorites</a>
+        <a href="#cart">Cart (0)</a>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-label="Perfume Store fragrance introduction">
+        <div class="hero-slides" aria-hidden="true">
+          <div class="hero-slide is-active">
+            <img src="https://framerusercontent.com/images/bPJ3d6klShwTw8QfDN9ShJHG00E.png" alt="" />
+          </div>
+          <div class="hero-slide">
+            <img src="https://framerusercontent.com/images/SthF0fF5Hq0AsA6cfGvrwspdU.png" alt="" />
+          </div>
+          <div class="hero-slide">
+            <img src="https://framerusercontent.com/images/yoDGykx75h9e4ZgtCwcd9zhWACQ.png" alt="" />
+          </div>
+        </div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+          <h1>Fragrance,<br />Simplified.</h1>
+          <p>Scents designed to slow you down — with refined notes and lasting impressions that speak for themselves.</p>
+          <a class="hero-cta" href="shop.html">Explore products</a>
+        </div>
+      </section>
+      <section class="hero-recommendations" aria-labelledby="hero-recommendations-title">
+        <div class="hero-recommendations-header"><div class="section-eyebrow">— JUST FOR YOU —</div><h2 id="hero-recommendations-title">You might also <em>like.</em></h2></div>
+        <div class="hero-recommendations-grid">
+          <a class="hero-recommendation-card" href="product.html?product=Dew%20Toner"><div class="hero-recommendation-image"><span>20% off</span><button class="favorite-button" type="button" aria-label="Add Dew Toner to favorites" aria-pressed="false">♡</button><img src="https://framerusercontent.com/images/OiaHKYo7D3gLtk9JB7Hr0fVZhZQ.png" alt="Dew Toner" /></div><div><h3>Dew Toner</h3><p class="sale-price">$79.00 USD <del>$99.00</del></p></div></a>
+          <a class="hero-recommendation-card" href="product.html?product=Glow%20Serum"><div class="hero-recommendation-image"><span>Bestseller</span><button class="favorite-button" type="button" aria-label="Add Glow Serum to favorites" aria-pressed="false">♡</button><img src="https://framerusercontent.com/images/gQOLspoYfZoJmCbCcTVO2y5V6s.png" alt="Glow Serum" /></div><div><h3>Glow Serum</h3><p>$39.00 USD</p></div></a>
+          <a class="hero-recommendation-card" href="product.html?product=Balance%20Moisturizer"><div class="hero-recommendation-image"><span>New</span><button class="favorite-button" type="button" aria-label="Add Balance Moisturizer to favorites" aria-pressed="false">♡</button><img src="https://framerusercontent.com/images/jesxlLzkoOFwmrESfDXVYJyogw.png" alt="Balance Moisturizer" /></div><div><h3>Balance Moisturizer</h3><p>$59.00 USD</p></div></a>
+          <a class="hero-recommendation-card" href="product.html?product=Aura%20Eye%20Cream"><div class="hero-recommendation-image"><span>17% off</span><button class="favorite-button" type="button" aria-label="Add Aura Eye Cream to favorites" aria-pressed="false">♡</button><img src="https://framerusercontent.com/images/c7Z3JkCrB6bdXtHjNy6sOHNeA.png" alt="Aura Eye Cream" /></div><div><h3>Aura Eye Cream</h3><p class="sale-price">$49.00 USD <del>$59.00</del></p></div></a>
+        </div>
+      </section>
+
+      <section id="bestsellers" class="bestsellers-section">
+        <div class="bestsellers-content">
+          <div class="bestsellers-header">
+            <div class="section-eyebrow">— BESTSELLERS —</div>
+            <h2>Loved by many, made for you.</h2>
+            <p>These are the go-to scents for unforgettable, balanced fragrance rituals.</p>
+          </div>
+
+          <div class="product-grid">
+            <a class="product-card" href="#product-pure-cleanser">
+              <div class="product-image-container">
+                <span class="product-badge">Bestseller</span>
+                <button class="favorite-button" type="button" aria-label="Add Pure Cleanser to favorites" aria-pressed="false">♡</button>
+                <img src="https://images.unsplash.com/photo-1556228578-8c89e6adf883?auto=format&fit=crop&w=1200&q=85" alt="Pure Cleanser" loading="lazy" />
+              </div>
+              <div class="product-info"><h3>Pure Cleanser</h3><p>$79.00 USD</p></div>
+            </a>
+
+            <a class="product-card" href="#product-glow-serum">
+              <div class="product-image-container">
+                <span class="product-badge">Bestseller</span>
+                <button class="favorite-button" type="button" aria-label="Add Glow Serum to favorites" aria-pressed="false">♡</button>
+                <img src="https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?auto=format&fit=crop&w=1200&q=85" alt="Glow Serum" loading="lazy" />
+              </div>
+              <div class="product-info"><h3>Glow Serum</h3><p>$39.00 USD</p></div>
+            </a>
+
+            <a class="product-card" href="#product-silk-body-wash">
+              <div class="product-image-container">
+                <span class="product-badge">Bestseller</span>
+                <button class="favorite-button" type="button" aria-label="Add Silk Body Wash to favorites" aria-pressed="false">♡</button>
+                <img src="https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?auto=format&fit=crop&w=1200&q=85" alt="Silk Body Wash" loading="lazy" />
+              </div>
+              <div class="product-info"><h3>Silk Body Wash</h3><p>$79.00 USD</p></div>
+            </a>
+
+            <a class="product-card" href="#product-volume-shampoo">
+              <div class="product-image-container">
+                <span class="product-badge">Bestseller</span>
+                <button class="favorite-button" type="button" aria-label="Add Pure Volume Shampoo to favorites" aria-pressed="false">♡</button>
+                <img src="https://images.unsplash.com/photo-1611930022073-b7a4ba5fcccd?auto=format&fit=crop&w=1200&q=85" alt="Pure Volume Shampoo" loading="lazy" />
+              </div>
+              <div class="product-info"><h3>Pure Volume Shampoo</h3><p>$99.00 USD</p></div>
+            </a>
+          </div>
+
+          <div class="action-container"><a class="view-all-button" href="shop.html">View all</a></div>
+        </div>
+      </section>
+
+      <section id="philosophy" class="philosophy-section">
+        <div class="philosophy-container">
+          <div class="philosophy-content">
+            <div class="philosophy-headline">
+              <div class="philosophy-subtitle"><span>—</span><span>Our fragrance philosophy</span><span>—</span></div>
+              <h2>Fragrance with <em>character.</em></h2>
+            </div>
+            <p>At Perfume Store, we believe fragrance should feel effortless — rooted in thoughtful composition, calm rituals, and unforgettable presence. Fewer distractions. No noise. Just the scent that feels like you.</p>
+          </div>
+          <div class="philosophy-image"><img src="https://framerusercontent.com/images/tSnFrPxsvfuxXGxBe5qY4SIXE.jpeg" alt="Skincare philosophy" loading="lazy" /></div>
+        </div>
+      </section>
+
+      <section id="categories" class="categories-section">
+        <div class="categories-header">
+          <div class="philosophy-subtitle"><span>—</span><span>Shop by category</span><span>—</span></div>
+          <h2>Find your <em>signature scent.</em></h2>
+          <p>Explore our curated fragrance categories — designed to simplify your ritual with purpose-driven compositions.</p>
+        </div>
+        <div class="categories-grid">
+          <a class="category-card" href="shop.html?audience=for-her">
+            <div class="category-image"><img src="https://images.unsplash.com/photo-1642999743456-f7073a0b2d9c?auto=format&amp;fit=crop&amp;w=1400&amp;q=88" alt="Perfume collection for her" loading="lazy" /><div class="category-overlay"></div></div>
+            <div class="category-footer"><span>For her</span><span class="category-arrow">→</span></div>
+          </a>
+          <a class="category-card" href="shop.html?audience=for-him">
+            <div class="category-image"><img src="https://images.unsplash.com/photo-1733348172372-31f147483275?auto=format&amp;fit=crop&amp;w=1400&amp;q=88" alt="Perfume collection for him" loading="lazy" /><div class="category-overlay"></div></div>
+            <div class="category-footer"><span>For him</span><span class="category-arrow">→</span></div>
+          </a>
+          <a class="category-card" href="shop.html?audience=unisex">
+            <div class="category-image"><img src="https://images.unsplash.com/photo-1705899844877-81bb0a0665c1?auto=format&amp;fit=crop&amp;w=1400&amp;q=88" alt="Gender-neutral perfume collection" loading="lazy" /><div class="category-overlay"></div></div>
+            <div class="category-footer"><span>For them</span><span class="category-arrow">→</span></div>
+          </a>
+        </div>
+      </section>
+
+      <section id="new-arrivals" class="bestsellers-section new-arrivals-section">
+        <div class="bestsellers-content">
+          <div class="bestsellers-header">
+            <div class="section-eyebrow">— NEW ARRIVALS —</div>
+            <h2>Freshly <em>crafted</em>, ready for <em>you.</em></h2>
+            <p>Discover our newest blends for head-to-toe radiance.</p>
+          </div>
+
+          <div class="product-grid new-arrivals-grid">
+            <a class="product-card" href="#product-balance-moisturizer">
+              <div class="product-image-container">
+                <span class="product-badge">New</span>
+                <button class="favorite-button" type="button" aria-label="Add Balance Moisturizer to favorites" aria-pressed="false">♡</button>
+                <img src="https://images.unsplash.com/photo-1611930022073-b7a4ba5fcccd?auto=format&fit=crop&w=1200&q=85" alt="Balance Moisturizer" loading="lazy" />
+              </div>
+              <div class="product-info"><h3>Balance Moisturizer</h3><p>$59.00 USD</p></div>
+            </a>
+
+            <a class="product-card" href="#product-renew-scrub">
+              <div class="product-image-container">
+                <span class="product-badge">New</span>
+                <button class="favorite-button" type="button" aria-label="Add Renew Scrub to favorites" aria-pressed="false">♡</button>
+                <img src="https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?auto=format&fit=crop&w=1200&q=85" alt="Renew Scrub" loading="lazy" />
+              </div>
+              <div class="product-info"><h3>Renew Scrub</h3><p>$49.00 USD</p></div>
+            </a>
+          </div>
+
+          <div class="action-container"><a class="view-all-button" href="shop.html">View all</a></div>
+        </div>
+      </section>
+
+      <section id="features" class="features-section">
+        <div class="features-container">
+          <div class="features-header">
+            <div class="philosophy-subtitle"><span>—</span><span>Craft &amp; Composition</span><span>—</span></div>
+            <h2>Where <em>artistry</em> meets slow craft.</h2>
+            <p>We pair expressive accords with hand-selected ingredients, blended in small batches for depth, balance, and a memorable dry-down.</p>
+          </div>
+
+          <div class="features-content-row">
+            <div class="feature-image-wrapper"><img src="https://images.unsplash.com/photo-1705899844877-81bb0a0665c1?auto=format&amp;fit=crop&amp;w=1800&amp;q=90" alt="Minimal perfume bottle surrounded by natural stones" loading="lazy" /></div>
+            <div class="features-list">
+              <article class="feature-item">
+                <div class="feature-item-header"><span class="item-number">— 01 —</span><h3>Thoughtful fragrance accords</h3></div>
+                <p>Layered top, heart, and base notes composed for a balanced scent that unfolds beautifully over time.</p>
+              </article>
+              <article class="feature-item">
+                <div class="feature-item-header"><span class="item-number">— 02 —</span><h3>Consciously sourced materials</h3></div>
+                <p>Beautiful naturals and considered aroma molecules selected from traceable growers and trusted makers.</p>
+              </article>
+              <article class="feature-item">
+                <div class="feature-item-header"><span class="item-number">— 03 —</span><h3>Small-batch blending</h3></div>
+                <p>Blended, rested, and quality-checked with patience so every bottle carries the same considered character.</p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="journal" class="journal-section">
+        <div class="journal-container">
+          <div class="journal-header">
+            <div class="philosophy-subtitle"><span>—</span><span>Journal</span><span>—</span></div>
+            <h2>Behind the <em>scents.</em></h2>
+            <p>Short reads on notes, rituals, and the slow craft behind memorable fragrance.</p>
+          </div>
+
+          <div class="journal-grid">
+            <article class="journal-card">
+              <a class="journal-image" href="#journal-reset">
+                <span class="journal-tag">Rituals</span>
+                <img src="https://images.unsplash.com/photo-1603006905003-be475563bc59?auto=format&fit=crop&w=1200&q=85" alt="Candles and skincare ritual" loading="lazy" />
+              </a>
+              <h3>Sunday night reset for your signature scent</h3>
+              <p>A slow evening fragrance ritual to reset the room and close the week.</p>
+              <a class="read-more" href="#journal-reset">Read more <span>—</span></a>
+            </article>
+
+            <article class="journal-card">
+              <a class="journal-image" href="#journal-oat">
+                <span class="journal-tag">Spotlight</span>
+                <img src="https://images.unsplash.com/photo-1587049352846-4a222e784d38?auto=format&fit=crop&w=1200&q=85" alt="Golden oat skincare formula" loading="lazy" />
+              </a>
+              <h3>The quiet power of a soft accord</h3>
+              <p>How gentle notes create a fragrance that stays close, warm, and personal.</p>
+              <a class="read-more" href="#journal-oat">Read more <span>—</span></a>
+            </article>
+
+            <article class="journal-card">
+              <a class="journal-image" href="#journal-batch">
+                <span class="journal-tag">Craft</span>
+                <img src="https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&w=1200&q=85" alt="Skincare formula on a spoon" loading="lazy" />
+              </a>
+              <h3>Batch #041: from blend to bottle</h3>
+              <p>A photo walk through a single production day in our fragrance studio.</p>
+              <a class="read-more" href="#journal-batch">Read more <span>—</span></a>
+            </article>
+          </div>
+
+          <a class="view-all-button journal-button" href="#all-articles">See all articles</a>
+        </div>
+      </section>
+
+      <section id="newsletter" class="newsletter-section">
+        <img class="newsletter-background" src="https://images.unsplash.com/photo-1646639181895-33d6b2f79d22?auto=format&fit=crop&w=1800&q=90" alt="Hands holding an elegant perfume bottle" loading="lazy" />
+        <div class="newsletter-overlay"></div>
+        <div class="newsletter-content">
+          <h2>Subscribe to our newsletter</h2>
+          <p>Be first to know about new blends, limited drops and<br class="desktop-break" /> events.</p>
+          <form class="newsletter-form" id="newsletter-form">
+            <label class="sr-only" for="newsletter-email">Your email address</label>
+            <input id="newsletter-email" name="email" type="email" placeholder="Your email address" required />
+            <button type="submit">Subscribe</button>
+          </form>
+          <p class="newsletter-success" id="newsletter-success" role="status" hidden>Thank you for subscribing.</p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-column">
+        <h2>Shop</h2>
+        <a href="#face-skin">Everyday scents</a>
+        <a href="#body-skin">Warm &amp; woody</a>
+        <a href="#hair-care">Fresh &amp; floral</a>
+      </div>
+      <div class="footer-column">
+        <h2>Legal</h2>
+        <a href="#privacy">Privacy policy</a>
+        <a href="#terms">Terms of service</a>
+        <a href="#returns">Returns &amp; refunds</a>
+      </div>
+      <div class="footer-column">
+        <h2>Explore</h2>
+        <a href="about.html">About Perfume Store</a>
+        <a href="journal.html">Journal</a><a href="contact.html">Contact</a>
+      </div>
+      <div class="footer-meta">
+        <div class="social-links" aria-label="Social media links">
+          <a href="#instagram" aria-label="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="1" class="social-fill"></circle></svg></a>
+          <a href="#youtube" aria-label="YouTube"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="6" width="18" height="12" rx="4"></rect><path d="m10 9 5 3-5 3z" class="social-fill"></path></svg></a>
+          <a href="#pinterest" aria-label="Pinterest"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 6h13l-5 5 5 5H5l5-5z"></path><path d="M10 11v9"></path></svg></a>
+        </div>
+        <p>© Perfume Store 2025</p>
+      </div>
+    </footer>
+
+    <script src="supabase-config.js"></script><script src="script.js"></script><script src="home-products.js"></script>
+  </body>
+</html>

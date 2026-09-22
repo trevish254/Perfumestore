@@ -1,0 +1,12 @@
+# Local and generated files
+node_modules/
+.vercel/
+.env
+.env.*
+!.env.example
+
+# Editor and OS files
+.vscode/
+.idea/
+Thumbs.db
+.DS_Store

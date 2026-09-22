@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Users — Perfume Store Admin</title>
+    <link rel="stylesheet" href="../admin.css" /><link rel="stylesheet" href="users.css" />
+  </head>
+  <body>
+    <aside class="sidebar"><div class="profile-card"><img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=160&q=85" alt="Perfume Store admin" /><div><h1>Perfume Store</h1><p>Store Admin</p></div></div><nav class="admin-nav" aria-label="Admin navigation"><a href="../index.html"><span>⌂</span>Dashboard</a><a href="../products/index.html"><span>▣</span>Products</a><a href="../orders/index.html"><span>▤</span>Orders</a><a class="active" href="./"><span>♙</span>Users</a><a href="../blogs/index.html"><span>▱</span>Blogs</a><a href="../settings/index.html"><span>⚙</span>Settings</a></nav><div class="follow-area"><p>Follow Me</p><div class="social-row"><a href="#x" aria-label="X">𝕏</a><a href="#linkedin" aria-label="LinkedIn">in</a><a href="#instagram" aria-label="Instagram">◎</a></div></div></aside>
+    <main class="admin-main users-main">
+      <section class="users-heading"><div><span class="dashboard-kicker">Customer directory</span><h2>Users</h2><p>Keep track of the people discovering their signature scents.</p></div><button class="invite-button" type="button">＋ Invite user</button></section>
+      <section class="user-metrics"><article><span>Total users</span><strong>892</strong><small class="positive">+5.6% this month</small></article><article><span>Active users</span><strong>746</strong><small>83.6% of total</small></article><article><span>New this month</span><strong>64</strong><small class="positive">+14.2% this month</small></article><article><span>Repeat customers</span><strong>38%</strong><small>Of all customers</small></article></section>
+      <section class="users-content"><div class="users-toolbar"><label class="users-search"><span>⌕</span><input id="user-search" type="search" placeholder="Search users..." /></label><div class="user-filters"><select id="user-status" aria-label="Filter by user status"><option value="all">All users</option><option value="active">Active</option><option value="new">New this month</option></select><select id="user-sort" aria-label="Sort users"><option value="recent">Most recent</option><option value="name">Name A–Z</option><option value="orders">Most orders</option></select></div></div>
+        <div class="users-table-wrap"><table class="users-table"><thead><tr><th>User</th><th>Email</th><th>Joined</th><th>Orders</th><th>Total spent</th><th>Status</th><th></th></tr></thead><tbody id="users-body">
+          <tr data-status="active" data-new="yes" data-orders="8"><td><div class="user-cell"><span class="user-avatar peach">AM</span><strong>Amina Mwangi</strong></div></td><td>amina@example.com</td><td>Sep 22, 2026</td><td>8</td><td>$482.00</td><td><span class="user-status active">Active</span></td><td><button class="row-menu" type="button">•••</button></td></tr>
+          <tr data-status="active" data-new="yes" data-orders="4"><td><div class="user-cell"><span class="user-avatar lilac">JK</span><strong>James Kamau</strong></div></td><td>james@example.com</td><td>Sep 18, 2026</td><td>4</td><td>$219.00</td><td><span class="user-status active">Active</span></td><td><button class="row-menu" type="button">•••</button></td></tr>
+          <tr data-status="active" data-new="no" data-orders="11"><td><div class="user-cell"><span class="user-avatar green">LN</span><strong>Leah Njeri</strong></div></td><td>leah@example.com</td><td>Aug 30, 2026</td><td>11</td><td>$697.00</td><td><span class="user-status active">Active</span></td><td><button class="row-menu" type="button">•••</button></td></tr>
+          <tr data-status="inactive" data-new="no" data-orders="2"><td><div class="user-cell"><span class="user-avatar blue">DO</span><strong>David Otieno</strong></div></td><td>david@example.com</td><td>Aug 21, 2026</td><td>2</td><td>$118.00</td><td><span class="user-status inactive">Inactive</span></td><td><button class="row-menu" type="button">•••</button></td></tr>
+          <tr data-status="active" data-new="no" data-orders="6"><td><div class="user-cell"><span class="user-avatar sand">SW</span><strong>Sarah Wanjiku</strong></div></td><td>sarah@example.com</td><td>Jul 14, 2026</td><td>6</td><td>$354.00</td><td><span class="user-status active">Active</span></td><td><button class="row-menu" type="button">•••</button></td></tr>
+        </tbody></table><p class="empty-users" id="empty-users" hidden>No users match your search.</p></div></section>
+    </main>
+    <script src="users.js"></script><script src="../admin.js"></script>
+  </body>
+</html>

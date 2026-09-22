@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shop — Perfume Store</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="shop.css" />
+  </head>
+  <body class="shop-page">
+    <header class="site-header">
+      <div class="announcement-bar" role="status"><span class="sparkle" aria-hidden="true">✧</span><span>15% off your order, applied automatically at checkout.</span></div>
+      <nav class="navbar" aria-label="Main navigation">
+        <div class="nav-group nav-links"><a href="shop.html">Shop</a><a href="about.html">About</a><a href="journal.html">Journal</a><a href="contact.html">Contact</a></div>
+        <a class="brand" href="index.html">Perfume Store</a>
+        <div class="nav-group nav-actions"><a href="#favorites">Favorites</a><button class="nav-button" type="button">Search</button><a href="#cart">Cart (<span id="cart-count">0</span>)</a></div>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu"><span></span><span></span></button>
+      </nav>
+      <div class="mobile-menu" id="mobile-menu" hidden><a href="shop.html">Shop</a><a href="about.html">About</a><a href="journal.html">Journal</a><a href="contact.html">Contact</a><a href="#favorites">Favorites</a><a href="#cart">Cart (0)</a></div>
+    </header>
+
+    <main class="shop-main">
+      <div class="shop-heading-row">
+        <h1>Explore products</h1>
+        <div class="shop-sort"><label for="sort-products">Sort by</label><select id="sort-products"><option value="featured">Relevance</option><option value="low">Price: low to high</option><option value="high">Price: high to low</option><option value="az">Name: A–Z</option></select></div>
+      </div>
+
+      <div class="shop-layout">
+        <aside class="filters-panel" aria-label="Product filters">
+          <div class="filter-toolbar"><span>☷ &nbsp;Filters</span><button id="clear-filters" type="button">Clear all</button></div>
+          <fieldset><legend>Type (0)</legend><label><input type="checkbox" name="type" value="face" /> Everyday scents</label><label><input type="checkbox" name="type" value="body" /> Warm &amp; woody</label><label><input type="checkbox" name="type" value="hair" /> Fresh &amp; floral</label></fieldset>
+          <fieldset><legend>Collection (0)</legend><label><input type="checkbox" name="collection" value="bestseller" /> Bestseller</label><label><input type="checkbox" name="collection" value="new" /> New arrivals</label></fieldset>
+          <fieldset><legend>Price (0)</legend><label><input type="checkbox" name="price" value="under25" /> Under $25</label><label><input type="checkbox" name="price" value="25-50" /> $25–$50</label><label><input type="checkbox" name="price" value="50-100" /> Over $50</label></fieldset>
+        </aside>
+
+        <section class="shop-products" aria-label="All products">
+          <div class="shop-results-bar"><span id="product-count">16 products</span></div>
+          <div class="shop-product-grid" id="product-grid">
+            <article class="shop-product-card" data-type="face" data-collection="bestseller" data-price="79" data-order="1"><div class="shop-product-image"><span class="product-badge">Bestseller</span><button class="favorite-button" type="button" aria-label="Add Pure Cleanser to favorites" aria-pressed="false">♡</button><img src="https://framerusercontent.com/images/S9bF5xZAKeF1uY3MNzTaUj2jts.png" alt="Pure Cleanser" /></div><div class="shop-product-info"><h2>Pure Cleanser</h2><p>$79.00 USD</p></div></article>
+            <article class="shop-product-card" data-type="face" data-collection="sale" data-price="69" data-order="2"><div class="shop-product-image"><span class="product-badge">20% off</span><button class="favorite-button" type="button" aria-label="Add Dew Toner to favorites" aria-pressed="false">♡</button><img src="https://framerusercontent.com/images/OiaHKYo7D3gLtk9JB7Hr0fVZhZQ.png" alt="Dew Toner" /></div><div class="shop-product-info"><h2>Dew Toner</h2><p class="sale-price">$79.00 USD <del>$99.00</del></p></div></article>
+            <article class="shop-product-card" data-type="face" data-collection="bestseller" data-price="39" data-order="3"><div class="shop-product-image"><span class="product-badge">Bestseller</span><button class="favorite-button" type="button" aria-label="Add Glow Serum to favorites" aria-pressed="false">♡</button><img src="https://framerusercontent.com/images/gQOLspoYfZoJmCbCcTVO2y5V6s.png" alt="Glow Serum" /></div><div class="shop-product-info"><h2>Glow Serum</h2><p>$39.00 USD</p></div></article>
+            <article class="shop-product-card" data-type="face" data-collection="new" data-price="59" data-order="4"><div class="shop-product-image"><span class="product-badge">New</span><button class="favorite-button" type="button" aria-label="Add Balance Moisturizer to favorites" aria-pressed="false">♡</button><img src="https://framerusercontent.com/images/jesxlLzkoOFwmrESfDXVYJyogw.png" alt="Balance Moisturizer" /></div><div class="shop-product-info"><h2>Balance Moisturizer</h2><p>$59.00 USD</p></div></article>
+            <article class="shop-product-card" data-type="face" data-collection="sale" data-price="49" data-order="5"><div class="shop-product-image"><span class="product-badge">15% off</span><button class="favorite-button" type="button" aria-label="Add Aura Eye Cream to favorites" aria-pressed="false">♡</button><img src="https://framerusercontent.com/images/c7Z3JkCrB6bdXtHjNy6sOHNeA.png" alt="Aura Eye Cream" /></div><div class="shop-product-info"><h2>Aura Eye Cream</h2><p class="sale-price">$49.00 USD <del>$59.00</del></p></div></article>
+            <article class="shop-product-card" data-type="face" data-collection="new" data-price="79" data-order="6"><div class="shop-product-image"><span class="product-badge">New</span><button class="favorite-button" type="button" aria-label="Add Mineral SPF 30 to favorites" aria-pressed="false">♡</button><img src="https://framerusercontent.com/images/YBxALmhawLOWNOR4qEpdCcD3Pg.png" alt="Mineral SPF 30" /></div><div class="shop-product-info"><h2>Mineral SPF 30</h2><p>$79.00 USD</p></div></article>
+            <article class="shop-product-card" data-type="body" data-collection="bestseller" data-price="79" data-order="7"><div class="shop-product-image"><span class="product-badge">Bestseller</span><button class="favorite-button" type="button" aria-label="Add Silk Body Wash to favorites" aria-pressed="false">♡</button><img src="https://framerusercontent.com/images/Yz9eJNgce3dpyP91uEJAtbqGAU.png" alt="Silk Body Wash" /></div><div class="shop-product-info"><h2>Silk Body Wash</h2><p>$79.00 USD</p></div></article>
+            <article class="shop-product-card" data-type="body" data-collection="new" data-price="59" data-order="8"><div class="shop-product-image"><span class="product-badge">New</span><button class="favorite-button" type="button" aria-label="Add Renew Scrub to favorites" aria-pressed="false">♡</button><img src="https://framerusercontent.com/images/CeMRd3b3b2hjjUIPHgQbFnwPcTc.png" alt="Renew Scrub" /></div><div class="shop-product-info"><h2>Renew Scrub</h2><p>$59.00 USD</p></div></article>
+            <article class="shop-product-card" data-type="body" data-collection="" data-price="69" data-order="9"><div class="shop-product-image"><button class="favorite-button" type="button" aria-label="Add Velvet Lotion to favorites" aria-pressed="false">♡</button><img src="https://framerusercontent.com/images/X7ucBELVjORpMI1iVbuJRqJhWzc.png" alt="Velvet Lotion" /></div><div class="shop-product-info"><h2>Velvet Lotion</h2><p>$69.00 USD</p></div></article>
+            <article class="shop-product-card" data-type="body" data-collection="" data-price="49" data-order="10"><div class="shop-product-image"><button class="favorite-button" type="button" aria-label="Add Soothe Body Oil to favorites" aria-pressed="false">♡</button><img src="https://framerusercontent.com/images/Fuwgnz4ki7hyRQLIrlpMZYmcXo4.png" alt="Soothe Body Oil" /></div><div class="shop-product-info"><h2>Soothe Body Oil</h2><p>$49.00 USD</p></div></article>
+            <article class="shop-product-card" data-type="body" data-collection="sale" data-price="59" data-order="11"><div class="shop-product-image"><span class="product-badge">13% off</span><button class="favorite-button" type="button" aria-label="Add Soft Hand Cream to favorites" aria-pressed="false">♡</button><img src="https://framerusercontent.com/images/KRATKE1cskpaCH5luKOXYG7crYM.png" alt="Soft Hand Cream" /></div><div class="shop-product-info"><h2>Soft Hand Cream</h2><p class="sale-price">$59.00 USD <del>$79.00</del></p></div></article>
+            <article class="shop-product-card" data-type="body" data-collection="new" data-price="59" data-order="12"><div class="shop-product-image"><span class="product-badge">New</span><button class="favorite-button" type="button" aria-label="Add Guard SPF 50 to favorites" aria-pressed="false">♡</button><img src="https://framerusercontent.com/images/wrxinQLIBlh3za9DlYglS2C7k.png" alt="Guard SPF 50" /></div><div class="shop-product-info"><h2>Guard SPF 50</h2><p class="sale-price">$59.00 USD <del>$69.00</del></p></div></article>
+            <article class="shop-product-card" data-type="hair" data-collection="bestseller" data-price="99" data-order="13"><div class="shop-product-image"><span class="product-badge">Bestseller</span><button class="favorite-button" type="button" aria-label="Add Pure Volume Shampoo to favorites" aria-pressed="false">♡</button><img src="https://framerusercontent.com/images/Qd27wbUCS1QfYsfto3HanHODUL4.png" alt="Pure Volume Shampoo" /></div><div class="shop-product-info"><h2>Pure Volume Shampoo</h2><p>$99.00 USD</p></div></article>
+            <article class="shop-product-card" data-type="hair" data-collection="new" data-price="99" data-order="14"><div class="shop-product-image"><span class="product-badge">New</span><button class="favorite-button" type="button" aria-label="Add Restore Conditioner to favorites" aria-pressed="false">♡</button><img src="https://framerusercontent.com/images/wjvY2Lnk8wG5pDW3TgC5xfWo.png" alt="Restore Conditioner" /></div><div class="shop-product-info"><h2>Restore Conditioner</h2><p>$99.00 USD</p></div></article>
+            <article class="shop-product-card" data-type="hair" data-collection="sale" data-price="49" data-order="15"><div class="shop-product-image"><span class="product-badge">New</span><button class="favorite-button" type="button" aria-label="Add Shine Serum to favorites" aria-pressed="false">♡</button><img src="https://framerusercontent.com/images/PYcMYAUWNP1MVf1cjyWqjRFbs.png" alt="Shine Serum" /></div><div class="shop-product-info"><h2>Shine Serum</h2><p class="sale-price">$49.00 USD <del>$69.00</del></p></div></article>
+            <article class="shop-product-card" data-type="hair" data-collection="new" data-price="59" data-order="16"><div class="shop-product-image"><span class="product-badge">New</span><button class="favorite-button" type="button" aria-label="Add Repair Mask to favorites" aria-pressed="false">♡</button><img src="https://framerusercontent.com/images/7mNOsZvPq4sDOJxicufPtio1AZk.png" alt="Repair Mask" /></div><div class="shop-product-info"><h2>Repair Mask</h2><p>$59.00 USD</p></div></article>
+          </div>
+          <p class="no-results" id="no-results" hidden>No products match your filters.</p>
+        </section>
+      </div>
+    </main>
+
+    <section class="newsletter-section shop-newsletter">
+      <img class="newsletter-background" src="https://images.unsplash.com/photo-1646639181895-33d6b2f79d22?auto=format&fit=crop&w=1800&q=90" alt="Hands holding an elegant perfume bottle" loading="lazy" />
+      <div class="newsletter-overlay"></div><div class="newsletter-content"><h2>Subscribe to our newsletter</h2><p>Be first to know about new blends, limited drops and<br class="desktop-break" /> events.</p><form class="newsletter-form" id="newsletter-form"><label class="sr-only" for="newsletter-email">Your email address</label><input id="newsletter-email" type="email" placeholder="Your email address" required /><button type="submit">Subscribe</button></form><p class="newsletter-success" id="newsletter-success" role="status" hidden>Thank you for subscribing.</p></div>
+    </section>
+    <footer class="site-footer">
+      <div class="footer-column"><h2>Shop</h2><a href="#face-skin">Face skin</a><a href="#body-skin">Body skin</a><a href="#hair-care">Hair care</a></div>
+      <div class="footer-column"><h2>Legal</h2><a href="#privacy">Privacy policy</a><a href="#terms">Terms of service</a><a href="#returns">Returns &amp; refunds</a></div>
+      <div class="footer-column"><h2>Explore</h2><a href="about.html">About Perfume Store</a><a href="journal.html">Journal</a></div>
+      <div class="footer-meta"><div class="social-links"><a href="#instagram" aria-label="Instagram">◎</a><a href="#youtube" aria-label="YouTube">▷</a><a href="#pinterest" aria-label="Pinterest">◇</a></div><p>© Perfume Store 2025</p></div>
+    </footer>
+    <script src="supabase-config.js"></script><script src="script.js"></script><script src="shop.js"></script>
+  </body>
+</html>

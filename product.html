@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product — Perfume Store</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="product.css" />
+  </head>
+  <body class="product-page">
+    <header class="site-header">
+      <div class="announcement-bar" role="status"><span class="sparkle" aria-hidden="true">✧</span><span>15% off your order, applied automatically at checkout.</span></div>
+      <nav class="navbar" aria-label="Main navigation">
+        <div class="nav-group nav-links"><a href="shop.html">Shop</a><a href="about.html">About</a><a href="journal.html">Journal</a><a href="contact.html">Contact</a></div>
+        <a class="brand" href="index.html">Perfume Store</a>
+        <div class="nav-group nav-actions"><a href="#favorites">Favorites</a><button class="nav-button" type="button">Search</button><a href="#cart">Cart (<span id="cart-count">0</span>)</a></div>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu"><span></span><span></span></button>
+      </nav>
+      <div class="mobile-menu" id="mobile-menu" hidden><a href="shop.html">Shop</a><a href="about.html">About</a><a href="journal.html">Journal</a><a href="contact.html">Contact</a><a href="#favorites">Favorites</a><a href="#cart">Cart (0)</a></div>
+    </header>
+
+    <main class="product-main">
+      <section class="product-detail" aria-label="Product details">
+        <div class="product-gallery">
+          <img id="product-image" src="" alt="" />
+          <button class="gallery-arrow gallery-prev" type="button" aria-label="Previous image">←</button>
+          <button class="gallery-arrow gallery-next" type="button" aria-label="Next image">→</button>
+          <div class="gallery-dots" aria-hidden="true"><span class="active"></span><span></span><span></span><span></span></div>
+        </div>
+        <div class="product-copy">
+          <h1 id="product-name">Pure Cleanser</h1>
+          <p class="detail-price" id="product-price">$79.00 USD</p>
+          <span class="detail-badge" id="product-badge">Bestseller</span>
+          <p class="detail-description" id="product-description">Gentle, sulfate-free wash that lifts makeup and oil without stripping moisture. Crafted with advanced actives and balanced botanicals, this formula delivers visible results while respecting even the most sensitive skin.</p>
+          <div class="purchase-area">
+            <div class="quantity-control"><button type="button" id="decrease" aria-label="Decrease quantity">−</button><span id="quantity">1</span><button type="button" id="increase" aria-label="Increase quantity">＋</button></div>
+            <button class="add-to-cart" type="button" id="add-to-cart">Add to cart</button>
+          </div>
+          <button class="shop-pay" type="button"> <span>Shop</span> Pay</button>
+          <p class="cart-message" id="cart-message" role="status" hidden>Added to your cart.</p>
+        </div>
+      </section>
+    </main>
+    <section class="recommendations-section" aria-labelledby="recommendations-title">
+      <div class="recommendations-header">
+        <div class="recommendations-eyebrow">— JUST FOR YOU —</div>
+        <h2 id="recommendations-title">You might also <em>like.</em></h2>
+      </div>
+      <div class="recommendations-grid">
+        <article class="recommendation-card" data-recommendation="Dew Toner"><div class="recommendation-image"><span class="recommendation-badge">20% off</span><button class="recommendation-favorite" type="button" aria-label="Add Dew Toner to favorites">♡</button><img src="https://framerusercontent.com/images/OiaHKYo7D3gLtk9JB7Hr0fVZhZQ.png" alt="Dew Toner" loading="lazy" /></div><div class="recommendation-info"><h3>Dew Toner</h3><p class="recommendation-sale">$79.00 USD <del>$99.00</del></p></div></article>
+        <article class="recommendation-card" data-recommendation="Glow Serum"><div class="recommendation-image"><span class="recommendation-badge">Bestseller</span><button class="recommendation-favorite" type="button" aria-label="Add Glow Serum to favorites">♡</button><img src="https://framerusercontent.com/images/gQOLspoYfZoJmCbCcTVO2y5V6s.png" alt="Glow Serum" loading="lazy" /></div><div class="recommendation-info"><h3>Glow Serum</h3><p>$39.00 USD</p></div></article>
+        <article class="recommendation-card" data-recommendation="Balance Moisturizer"><div class="recommendation-image"><span class="recommendation-badge">New</span><button class="recommendation-favorite" type="button" aria-label="Add Balance Moisturizer to favorites">♡</button><img src="https://framerusercontent.com/images/jesxlLzkoOFwmrESfDXVYJyogw.png" alt="Balance Moisturizer" loading="lazy" /></div><div class="recommendation-info"><h3>Balance Moisturizer</h3><p>$59.00 USD</p></div></article>
+        <article class="recommendation-card" data-recommendation="Aura Eye Cream"><div class="recommendation-image"><span class="recommendation-badge">17% off</span><button class="recommendation-favorite" type="button" aria-label="Add Aura Eye Cream to favorites">♡</button><img src="https://framerusercontent.com/images/c7Z3JkCrB6bdXtHjNy6sOHNeA.png" alt="Aura Eye Cream" loading="lazy" /></div><div class="recommendation-info"><h3>Aura Eye Cream</h3><p class="recommendation-sale">$49.00 USD <del>$59.00</del></p></div></article>
+      </div>
+    </section>
+    <footer class="site-footer">
+      <div class="footer-column"><h2>Shop</h2><a href="shop.html#face-skin">Face skin</a><a href="shop.html#body-skin">Body skin</a><a href="shop.html#hair-care">Hair care</a></div>
+      <div class="footer-column"><h2>Legal</h2><a href="#privacy">Privacy policy</a><a href="#terms">Terms of service</a><a href="#returns">Returns &amp; refunds</a></div>
+      <div class="footer-column"><h2>Explore</h2><a href="about.html">About Perfume Store</a><a href="journal.html">Journal</a></div>
+      <div class="footer-meta"><div class="social-links"><a href="#instagram" aria-label="Instagram">◎</a><a href="#youtube" aria-label="YouTube">▷</a><a href="#pinterest" aria-label="Pinterest">◇</a></div><p>© Perfume Store 2025</p></div>
+    </footer>
+    <script src="supabase-config.js"></script><script src="script.js"></script><script src="product.js"></script>
+  </body>
+</html>
