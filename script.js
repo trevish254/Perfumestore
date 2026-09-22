@@ -4,6 +4,8 @@ const mobileMenu = document.querySelector('#mobile-menu');
 let currentSlide = 0;
 
 document.querySelectorAll('.brand').forEach((brand) => { brand.textContent = 'Perfume Store'; brand.setAttribute('aria-label', 'Perfume Store home'); });
+document.querySelectorAll('.nav-links').forEach((nav) => { if (!nav.querySelector('a[href="index.html"]')) { const home = document.createElement('a'); home.href = 'index.html'; home.textContent = 'Home'; nav.prepend(home); } });
+document.querySelectorAll('.mobile-menu').forEach((menu) => { if (!menu.querySelector('a[href="index.html"]')) { const home = document.createElement('a'); home.href = 'index.html'; home.textContent = 'Home'; menu.prepend(home); } });
 document.querySelectorAll('.footer-meta p').forEach((copyright) => { copyright.textContent = '© Perfume Store 2025'; });
 document.querySelectorAll('.footer-column').forEach((column) => {
   const heading = column.querySelector('h2')?.textContent.trim();
